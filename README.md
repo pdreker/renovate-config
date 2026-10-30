@@ -10,8 +10,9 @@ uses them with a `renovate.json` of
 }
 ```
 
-and adds only what is its own. The Mend Renovate app must have access to this repository as well
-as to the one using it.
+and adds only what is its own. This repository is public on purpose: Mend's hosted Renovate does
+not load presets from a private repository into a public one, so a private preset failed for the
+public repositories ("Cannot find preset's package"). It holds rules only, nothing secret.
 
 What `default.json` sets:
 
