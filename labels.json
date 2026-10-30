@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Labels by update type, for counting open PRs per kind (github_exporter in the homelab)",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"]
+    },
+    {
+      "matchUpdateTypes": ["pin", "pinDigest"],
+      "addLabels": ["pin"]
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "addLabels": ["digest"]
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "addLabels": ["lockfile"]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "addLabels": ["security"]
+  }
+}

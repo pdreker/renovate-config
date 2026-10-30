@@ -4,7 +4,8 @@
   "extends": [
     "config:recommended",
     "docker:pinDigests",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "github>pdreker/renovate-config:labels"
   ],
   "timezone": "Europe/Berlin",
   "minimumReleaseAge": "7 days",

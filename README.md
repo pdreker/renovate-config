@@ -21,3 +21,6 @@ What `default.json` sets:
   tag stays as a comment). Pinning itself skips the cooling-off: it changes no version.
 - **Lock file maintenance** every Monday before 6 am: one PR that refreshes the whole lock file,
   indirect dependencies included.
+- **Labels by update type** (`labels.json`, also usable on its own as
+  `github>pdreker/renovate-config:labels`): `major`, `minor`, `patch`, `pin`, `digest`, `lockfile`,
+  and `security` for vulnerability fixes. The homelab's github_exporter counts open PRs by them.
