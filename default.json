@@ -18,5 +18,15 @@
     "schedule": [
       "before 6am on monday"
     ]
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Pinning changes no version, it records the one in use (digest, Action SHA): no cooling-off",
+      "matchUpdateTypes": [
+        "pin",
+        "pinDigest"
+      ],
+      "minimumReleaseAge": null
+    }
+  ]
 }

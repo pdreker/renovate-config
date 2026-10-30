@@ -18,6 +18,6 @@ What `default.json` sets:
 - `config:recommended`, time zone Europe/Berlin, the Dependency Dashboard, label `dependencies`.
 - **7 days' cooling-off** (`minimumReleaseAge`): a release becomes a PR only after a week.
 - **Pinned versions:** container base images with a digest, GitHub Actions on a commit SHA (the
-  tag stays as a comment).
+  tag stays as a comment). Pinning itself skips the cooling-off: it changes no version.
 - **Lock file maintenance** every Monday before 6 am: one PR that refreshes the whole lock file,
   indirect dependencies included.
