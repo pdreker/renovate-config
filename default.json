@@ -28,6 +28,13 @@
         "pinDigest"
       ],
       "minimumReleaseAge": null
+    },
+    {
+      "description": "Lock file maintenance has no release timestamps, so the stability check would stay pending forever; the package manager enforces the cooling-off there",
+      "matchUpdateTypes": [
+        "lockFileMaintenance"
+      ],
+      "minimumReleaseAge": null
     }
   ]
 }
