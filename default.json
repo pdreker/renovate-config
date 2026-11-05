@@ -5,6 +5,8 @@
     "config:recommended",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    "abandonments:recommended",
     "github>pdreker/renovate-config:labels"
   ],
   "timezone": "Europe/Berlin",

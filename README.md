@@ -32,6 +32,13 @@ What `default.json` sets:
 - **Own projects** (`pdreker/**`, `docker.io/pdreker/**`, `ghcr.io/pdreker/**`: the shared
   workflows and the own images) skip the cooling-off: their dependencies already waited their
   week in their own repositories.
+- **Config migration PRs** (`:configMigration`): when Renovate renames a configuration option,
+  it opens a PR that rewrites the config to the new name.
+- **Abandonment warnings** (`abandonments:recommended`): a dependency without a release for a year
+  is flagged as abandoned on the Dependency Dashboard.
 - **Labels by update type** (`labels.json`, also usable on its own as
   `github>pdreker/renovate-config:labels`): `major`, `minor`, `patch`, `pin`, `digest`, `lockfile`,
   and `security` for vulnerability fixes. The homelab's github_exporter counts open PRs by them.
+
+The presets are checked by `renovate-config-validator` in CI (`.github/workflows/validate.yml`)
+on every push and pull request.
