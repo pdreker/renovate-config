@@ -35,6 +35,16 @@
         "lockFileMaintenance"
       ],
       "minimumReleaseAge": null
+    },
+    {
+      "description": "Own reusable workflows (pdreker/github-workflows): their action updates already waited out the cooling-off there, a second week in every caller only delays them",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "pdreker/**"
+      ],
+      "minimumReleaseAge": null
     }
   ]
 }
