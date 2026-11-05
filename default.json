@@ -37,12 +37,11 @@
       "minimumReleaseAge": null
     },
     {
-      "description": "Own reusable workflows (pdreker/github-workflows): their action updates already waited out the cooling-off there, a second week in every caller only delays them",
-      "matchManagers": [
-        "github-actions"
-      ],
+      "description": "Own projects (pdreker/**: workflows, images on Docker Hub and ghcr.io): their dependencies already waited out the cooling-off in their own repositories; a second week only delays the release",
       "matchPackageNames": [
-        "pdreker/**"
+        "pdreker/**",
+        "docker.io/pdreker/**",
+        "ghcr.io/pdreker/**"
       ],
       "minimumReleaseAge": null
     }
