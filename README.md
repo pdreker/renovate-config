@@ -24,6 +24,8 @@ What `default.json` sets:
   indirect dependencies included. Renovate sees no release dates here, so its cooling-off check
   would stay pending forever; the rule turns it off for this PR. The package manager enforces the
   week instead (for uv: `exclude-newer = "1 week"` under `[tool.uv]` in `pyproject.toml`).
+- **Own reusable workflows** (`pdreker/github-workflows`, GitHub Actions manager) skip the
+  cooling-off: the action updates inside them already waited their week there.
 - **Labels by update type** (`labels.json`, also usable on its own as
   `github>pdreker/renovate-config:labels`): `major`, `minor`, `patch`, `pin`, `digest`, `lockfile`,
   and `security` for vulnerability fixes. The homelab's github_exporter counts open PRs by them.
