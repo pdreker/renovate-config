@@ -12,7 +12,9 @@
   "timezone": "Europe/Berlin",
   "minimumReleaseAge": "7 days",
   "internalChecksFilter": "strict",
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+    "enabled": true
+  },
   "labels": [
     "dependencies"
   ],
@@ -46,6 +48,24 @@
         "ghcr.io/pdreker/**"
       ],
       "minimumReleaseAge": null
+    },
+    {
+      "description": "Third-party updates below major: one PR per repository and week, as for lock file maintenance. Each PR and merge costs GitHub Actions minutes in private repositories; one update per PR spent hundreds a month. Own projects stay separate and immediate, so rollouts do not wait",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "matchPackageNames": [
+        "!pdreker/**",
+        "!docker.io/pdreker/**",
+        "!ghcr.io/pdreker/**"
+      ],
+      "groupName": "third-party updates",
+      "groupSlug": "third-party-weekly",
+      "schedule": [
+        "before 6am on monday"
+      ]
     }
   ]
 }
