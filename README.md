@@ -29,6 +29,11 @@ What `default.json` sets:
   indirect dependencies included. Renovate sees no release dates here, so its cooling-off check
   would stay pending forever; the rule turns it off for this PR. The package manager enforces the
   week instead (for uv: `exclude-newer = "1 week"` under `[tool.uv]` in `pyproject.toml`).
+- **Third-party updates below major, weekly in one PR** (Monday before 6 am, like lock file
+  maintenance): minor, patch and digest updates of everything except the own projects land
+  together. Every PR and its merge cost GitHub Actions minutes in private repositories, and one
+  update per PR spent hundreds of minutes a month. Major updates stay one PR each; own projects
+  stay separate and immediate, so a rollout does not wait a week.
 - **Own projects** (`pdreker/**`, `docker.io/pdreker/**`, `ghcr.io/pdreker/**`: the shared
   workflows and the own images) skip the cooling-off: their dependencies already waited their
   week in their own repositories.
