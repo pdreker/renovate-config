@@ -50,6 +50,17 @@
       "minimumReleaseAge": null
     },
     {
+      "description": "Own projects go into what the repository builds (a linter in an image, an image a role runs): their update is a fix, so release-please releases the consumer; a chore would never ship. The shared workflows and this config only change CI and stay chores",
+      "matchPackageNames": [
+        "pdreker/**",
+        "docker.io/pdreker/**",
+        "ghcr.io/pdreker/**",
+        "!pdreker/github-workflows",
+        "!pdreker/renovate-config"
+      ],
+      "semanticCommitType": "fix"
+    },
+    {
       "description": "Third-party updates below major: one PR per repository and week, as for lock file maintenance. Each PR and merge costs GitHub Actions minutes in private repositories; one update per PR spent hundreds a month. Own projects stay separate and immediate, so rollouts do not wait",
       "matchUpdateTypes": [
         "minor",
