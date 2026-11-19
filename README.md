@@ -37,6 +37,10 @@ What `default.json` sets:
 - **Own projects** (`pdreker/**`, `docker.io/pdreker/**`, `ghcr.io/pdreker/**`: the shared
   workflows and the own images) skip the cooling-off: their dependencies already waited their
   week in their own repositories.
+- **Own projects are fixes** (`fix(deps): …`): an own project goes into what the repository
+  builds, such as a linter in an image or an image a role runs, so its update must trigger a
+  release-please release of the consumer; with Renovate's default `chore(deps)` it never ships.
+  The shared workflows and this config only change CI and stay `chore(deps)`.
 - **Config migration PRs** (`:configMigration`): when Renovate renames a configuration option,
   it opens a PR that rewrites the config to the new name.
 - **Abandonment warnings** (`abandonments:recommended`): a dependency without a release for a year
